@@ -103,6 +103,7 @@ public:
     Q_INVOKABLE int Abort();
     Q_INVOKABLE void Verify();
     Q_INVOKABLE void Remove();
+    Q_INVOKABLE void Enumerate();
 
     Q_SIGNAL void Added(const QString &finger);
     Q_SIGNAL void Removed(const QString &finger);

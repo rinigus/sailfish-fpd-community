@@ -84,6 +84,16 @@ void FPDCommunity::Clear()
     }
 }
 
+void FPDCommunity::Enumerate()
+{
+    qDebug() << Q_FUNC_INFO;
+
+    if (m_state == FPSTATE_IDLE) {
+        setState(FPSTATE_ENUMERATING);
+        m_androidFP.enumerate();
+    }
+}
+
 QString FPDCommunity::GetState()
 {
     qDebug() << Q_FUNC_INFO;
